@@ -1,0 +1,166 @@
+[v-cloak] {
+  display: none;
+}
+
+/* @import "_responsive"; */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #cbcece;
+}
+
+.wrapper {
+  width: 80%;
+  height: 75%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
+  background-color: #ffffff3b;
+  -webkit-box-shadow: 25px 25px 29px #0000006b;
+          box-shadow: 25px 25px 29px #0000006b;
+  overflow: hidden;
+  text-align: center;
+}
+
+.wrapper .Time_btns {
+  background-color: #a09a9a;
+  padding: 10px;
+  width: 350px;
+  margin: 0 auto 21px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.wrapper .Time_btns span {
+  color: chocolate;
+  padding: 0 9px;
+  cursor: pointer;
+}
+
+.wrapper .Time_btns .active, .wrapper .Time_btns span:hover {
+  color: #000;
+}
+
+.wrapper .temporary {
+  height: 286px;
+  width: 306px;
+  margin: 20px auto;
+  border: 3px solid #F44336;
+  border-radius: 50%;
+}
+
+.wrapper .temporary .times {
+  font-size: 73px;
+  margin-top: 86px;
+  font-weight: bold;
+}
+
+.wrapper .temporary button {
+  border: antiquewhite;
+  background-color: transparent;
+  margin-top: 38px;
+  outline: none;
+  cursor: pointer;
+}
+
+.wrapper .changeOfTimes {
+  color: #d2691e;
+  font-size: 80px;
+  position: relative;
+}
+
+.wrapper .changeOfTimes .add {
+  position: absolute;
+  left: 247px;
+  top: -218px;
+  cursor: pointer;
+}
+
+.wrapper .changeOfTimes .sub {
+  position: absolute;
+  right: 158px;
+  top: -201px;
+  cursor: pointer;
+}
+
+.wrapper .choose {
+  margin-top: 100px;
+}
+
+.wrapper .choose h3 {
+  font-size: 21px;
+  color: #d26961;
+}
+
+.wrapper .choose input {
+  width: 182px;
+  padding: 2px 15px;
+  font-size: 18px;
+  outline: none;
+  color: #d26961;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
+
+.wrapper .choose span {
+  display: block;
+  margin: 26px auto;
+  cursor: pointer;
+  width: 53px;
+  color: cornflowerblue;
+}
+
+.wrapper .pulse {
+  -webkit-animation: pulse 2s infinite ease-in-out;
+          animation: pulse 2s infinite ease-in-out;
+}
+
+.wrapper .butsComplete button {
+  cursor: pointer;
+  background-color: #f44336;
+  padding: 8px 11px;
+  border-radius: 20px;
+  color: white;
+  margin: auto;
+  font-weight: bold;
+  width: 140px;
+}
+
+@-webkit-keyframes pulse {
+  0%, 50%, 100% {
+    height: 81px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    height: 81px;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes pulse {
+  0%, 50%, 100% {
+    height: 81px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    height: 81px;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+.wrapper [v-cloak] {
+  display: none;
+}

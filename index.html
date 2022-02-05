@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>pomodoro</title>
+</head>
+<body>
+    <div id="app" class="wrapper">
+        <h2>pomodoro</h2>
+        <div class="Time_btns">
+            <span @click="pomodoro()" class="active">pomodoro</span>
+            <span @click="ShortBreak()">short break</span>
+            <span @click="LongBreak()">long break</span>
+        </div>
+        <div v-if="!chooseTime">
+            <div class="temporary">
+                <div class="times" v-cloak  :class="{pulse : timeComplete}">{{timePomoMin}}:{{timeSic}}</div>
+                <div  v-if="specialInStop">
+                    <button v-if="!timeComplete"> 
+                        <span @click="btnPause()" v-if="!off">PAUSE</span> 
+                        <span @click="btnStar()" v-if="off">START</span>
+                    </button>
+                </div>
+                
+            </div>
+            <div  v-if="!timeComplete" class="changeOfTimes">
+                <span v-if="specialInStop"  @click="addTime()" class="add">5 +</span>
+            </div>
+        </div>
+        
+        <div class="choose"  v-if="chooseTime">
+            <h3>Enter the number of minutes to start the timer</h3>
+            <input type="number" min="0" max="100" step="10" v-model="inputMinutes">
+            <span @click="btnStarpomo()">OK</span>
+        </div>
+
+        <audio v-if="timeComplete" autoplay="autoplay" loop preload="auto" src="audio/Melody.m4a"></audio>
+
+        <div v-if="timeComplete" class="butsComplete">
+            <button @click="shutdown()">Shutdown</button>
+            <button @click="restart()">Restart</button>
+        </div>
+
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
